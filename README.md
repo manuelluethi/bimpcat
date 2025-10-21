@@ -11,6 +11,9 @@ Finally, consider a highly imbalanced binary predictor. On a given bootstrap sam
 ## Dependencies
 The package uses `dplyr`, `tidyr`, and `mice`.
 
+## Parallelization
+For parallelization, we rely on `parallel`, which is included in the base installation. In the end, the package calls high-level functions passed as arguments to the methods and any more complicated  parallelization requires these functions to be parallelizable.
+
 ## Tested model classes
 The package has been tested on the following model classes so far:
 - `lm`
