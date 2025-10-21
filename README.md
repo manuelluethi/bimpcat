@@ -17,3 +17,4 @@ The package has been tested on the following model classes so far:
 - `glm`
 - `betareg`
 - `glmmTMB`
+- `lme4`
