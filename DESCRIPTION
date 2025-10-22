@@ -1,11 +1,20 @@
 Package: bimpcat
-Title: What the Package Does (One Line, Title Case)
+Title: Bootsrap, Multiple Imputation of Sequential Categoricals, and Fitting
 Version: 0.0.0.9000
 Authors@R: 
-    person("First", "Last", , "first.last@example.com", role = c("aut", "cre"))
-Description: What the package does (one paragraph).
-License: `use_mit_license()`, `use_gpl3_license()` or friends to pick a
-    license
+    person("Manuel", "Luethi", , "manuelluethi@gmail.com", 
+    role = c("aut", "cre"))
+Description: High-level functionality handling non-parametric bootstrap,
+    multiple imputation using chained equations for sequential categorical
+    measurements, and multiple model fits.
+License: MIT + file LICENSE
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.3.3
+Imports: 
+    dplyr (>= 1.1.4),
+    mice (>= 3.18.0),
+    tidyr (>= 1.3.1)
+Suggests: 
+    ggplot2 (>= 4.0.0),
+    testthat (>= 3.2.3)
