@@ -47,11 +47,11 @@ categorize <- Vectorize(function(x){
   } else {
     return(5)
   }})
-eq5d5l_mobility_V1 <- cat_one(plogis(eq5d5l_linear_pred_base + rnorm(n,0,1)))
-eq5d5l_self_care_V1 <- cat_one(plogis(eq5d5l_linear_pred_base + rnorm(n,0,1)))
-eq5d5l_usual_activities_V1 <- cat_one(plogis(eq5d5l_linear_pred_base + rnorm(n,0,1)))
-eq5d5l_pain_discomfort_V1 <- cat_one(plogis(eq5d5l_linear_pred_base + rnorm(n,0,1)))
-eq5d5l_anxiety_depression_V1 <- cat_one(plogis(eq5d5l_linear_pred_base + rnorm(n,0,1)))
+eq5d5l_mobility_V1 <- categorize(plogis(eq5d5l_linear_pred_base + rnorm(n,0,1)))
+eq5d5l_self_care_V1 <- categorize(plogis(eq5d5l_linear_pred_base + rnorm(n,0,1)))
+eq5d5l_usual_activities_V1 <- categorize(plogis(eq5d5l_linear_pred_base + rnorm(n,0,1)))
+eq5d5l_pain_discomfort_V1 <- categorize(plogis(eq5d5l_linear_pred_base + rnorm(n,0,1)))
+eq5d5l_anxiety_depression_V1 <- categorize(plogis(eq5d5l_linear_pred_base + rnorm(n,0,1)))
 # The development of the eq5d5l-scores depends on the treatment
 for(i in seq(2,4)){
   eq5d5l_mobility_Vi <- previous with certain probability depending on treatment decreased or raised
