@@ -8,8 +8,19 @@ In addition, the computation of the ICER is often based on an estimate of the qu
 
 Finally, consider a highly imbalanced binary predictor. On a given bootstrap sample, the value of the predictor might be constant, in which case most model fits like `lm()` or `glm()` will fail. Hence, this package takes care of adjusting the model for constant predictors before **fitting** to a given bootstrap sample.
 
+The goal was to implement the functionality in as flexible a manner as I could
+imagine. Therefore, we use the `R6` package to define classes with properties
+and methods which allow us to interact with intermediate results at any time,
+possibly changing model specifications along the way, extending the number of
+bootstraps, and so on, without having to rerun the procedure from scratch.
+
+**Caveat:** As a consequence of the approach chosen, some of the usual R-syntax
+might fail when used with this package. Our goal is to eventually write wrappers
+for all public methods, i.e., so that we can call `> fit(model, object)` instead
+of `object$fit(model)`. But this might take some time. 
+
 ## Dependencies
-The package uses `dplyr`, `tidyr`, and `mice`.
+The package uses `dplyr`, `tidyr`, `R6`, and `mice`.
 
 ## Parallelization
 For parallelization, we rely on `parallel`, which is included in the base
