@@ -1,2 +1,3 @@
 ^LICENSE\.md$
 ^README\.Rmd$
+^data/generate_test_data\.R$
